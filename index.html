@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cesar E. Quintana Ruiz</title>
+  <meta name="description" content="Página personal de Cesar E. Quintana Ruiz, estudiante de Ingeniería en Sistemas Computacionales.">
+  <style>
+    /* 1. Variables: colores y tipografías en un solo lugar */
+    :root {
+      --papel: #eef3f8;
+      --tinta: #14213d;
+      --tinta-suave: #44506b;
+      --azul: #2f5bea;
+      --azul-claro: #dfe8fd;
+      --linea: #c9d5e6;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* 2. Base: reinicio sencillo y estilos del texto */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--papel);
+      color: var(--tinta);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+    main, header > div, footer > div {
+      width: min(100% - 2.5rem, 42rem);
+      margin-inline: auto;
+    }
+
+    /* 3. Encabezado: papel cuadriculado, como una libreta de ingeniería */
+    header {
+      padding: clamp(3.5rem, 12vw, 7rem) 0 clamp(2.5rem, 8vw, 4.5rem);
+      background-color: var(--papel);
+      background-image:
+        linear-gradient(var(--linea) 1px, transparent 1px),
+        linear-gradient(90deg, var(--linea) 1px, transparent 1px);
+      background-size: 28px 28px;
+      border-bottom: 2px solid var(--tinta);
+    }
+    header h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(2.6rem, 11vw, 4.75rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      background: var(--papel);
+      display: inline;
+      box-shadow: 0.35rem 0 0 var(--papel), -0.35rem 0 0 var(--papel);
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+    header p {
+      margin-top: 1.5rem;
+      max-width: 30rem;
+      color: var(--tinta-suave);
+      font-size: 1.125rem;
+      background: var(--papel);
+      display: inline-block;
+      padding: 0.15rem 0.5rem 0.15rem 0;
+    }
+
+    /* 4. Secciones */
+    section { padding: clamp(2.25rem, 7vw, 3.5rem) 0 0; }
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    p + p { margin-top: 1rem; }
+
+    /* 5. Listas: intereses como etiquetas, aprendizaje como lista con detalle */
+    .intereses {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .intereses li {
+      background: var(--azul-claro);
+      color: var(--tinta);
+      border: 1.5px solid var(--azul);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-weight: 600;
+      font-size: 0.975rem;
+    }
+    .aprender {
+      list-style: none;
+      border-left: 3px solid var(--azul);
+      padding-left: 1.25rem;
+    }
+    .aprender li + li { margin-top: 1rem; }
+    .aprender strong { display: block; font-size: 1.0625rem; }
+    .aprender span { color: var(--tinta-suave); }
+
+    /* 6. Botón de GitHub */
+    .boton {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      background: var(--tinta);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      transition: background 0.2s;
+    }
+    .boton:hover { background: var(--azul); }
+    .boton:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; }
+
+    /* 7. Pie de página */
+    footer { padding: 3.5rem 0 2.5rem; color: var(--tinta-suave); font-size: 0.9rem; }
+
+    /* 8. Pantallas grandes: un poco más de aire */
+    @media (min-width: 700px) {
+      body { font-size: 1.125rem; }
+      .intereses li { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con mi nombre -->
+  <header>
+    <div>
+      <h1>Cesar E. Quintana Ruiz</h1>
+      <p>Estudiante de primer semestre de Ingeniería en Sistemas Computacionales en la Universidad La Salle Chihuahua.</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sobre mí -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy un joven de chihuahua que cursa la carrera de ISC en la salle, actualmente voy en primer semestre y busco comenzar a aprender más sobre la programacion en general. .</p>
+      <p>Esta página es mi primer proyecto web y la iré mejorando conforme aprenda más.</p>
+    </section>
+
+    <!-- Intereses -->
+    <section id="intereses">
+      <h2>Mis intereses</h2>
+      <ul class="intereses">
+        <li>Programación</li>
+        <li>Videojuegos</li>
+        <li>Tecnología y hardware</li>
+        <li>Inteligencia artificial</li>
+      </ul>
+    </section>
+
+    <!-- Lo que quiero aprender -->
+    <section id="aprender">
+      <h2>Lo que quiero aprender</h2>
+      <ul class="aprender">
+        <li><strong>Programar con soltura</strong><span>Empezar con Python y JavaScript y resolver problemas reales con código.</span></li>
+        <li><strong>Estructuras de datos y algoritmos</strong><span>Entender cómo organizar la información y hacer programas eficientes.</span></li>
+        <li><strong>Desarrollo web</strong><span>Crear sitios y aplicaciones que otras personas puedan usar.</span></li>
+        <li><strong>Git y GitHub</strong><span>Trabajar en equipo y llevar el control de mis proyectos.</span></li>
+      </ul>
+    </section>
+
+    <!-- Enlace a GitHub -->
+    <section id="github">
+      <h2>Mi código</h2>
+      <p>Aquí voy publicando lo que aprendo y construyo.</p>
+      <a class="boton" href="https://github.com/tu-usuario" target="_blank" rel="noopener">Ver mi perfil de GitHub</a>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Cesar E. Quintana Ruiz</div>
+  </footer>
+
+</body>
+</html>
